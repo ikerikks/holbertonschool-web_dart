@@ -1,10 +1,17 @@
-String longestUniqueSubstring(String str) {
-  var tmp = '';
-  str.split('').forEach((l) {
-    if (tmp.contains(l)) {
-      tmp = '';
+ longestUniqueSubstring(String str) {
+  var tmp = str.split('');
+  var res = '';
+  var longest = '';
+
+  tmp.forEach((l) {
+    if (res.contains(l)) {
+      longest = longest.length < res.length ? res : longest;
+      res = '';
     }
-    tmp += l;
+    res += l;
   });
-  return tmp;
+
+  longest = longest.length < res.length ? res : longest;
+  
+  return longest;
 }
