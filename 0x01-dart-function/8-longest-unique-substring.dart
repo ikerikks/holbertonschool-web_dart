@@ -1,4 +1,4 @@
- longestUniqueSubstring(String str) {
+String longestUniqueSubstring(String str) {
   var tmp = str.split('');
   var res = '';
   var longest = '';
