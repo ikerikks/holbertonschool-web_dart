@@ -4,6 +4,9 @@ bool isLower(String char)=> char == char.toLowerCase()&& !isNum(char);
 
 class Password {
   String _password = '';
+  Password({password}) {
+    this._password = password; 
+  }
   bool isValid() {
     int upper = 0;
     int lower = 0;
