@@ -10,12 +10,12 @@ class Password {
     int digits = 0;
     int l = password.length;
 
-    if (l < 8 || l >16) { return false; }
+    if (l < 8 || l > 16) { return false; }
     for (String char in password.split('')) {
-      if (upper > 0 && lower > 0 && digits > 0) { return true; }
       if (isNum(char)) { digits += 1; }
       else if (isUpper(char)) { upper += 1; }
       else if (isLower(char)) { lower += 1; }
+      if (upper > 0 && lower > 0 && digits > 0) { return true; }
     }
     return false;
   }
