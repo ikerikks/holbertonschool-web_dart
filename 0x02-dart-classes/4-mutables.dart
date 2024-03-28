@@ -4,18 +4,18 @@ bool isLower(String char)=> char == char.toLowerCase()&& !isNum(char);
 
 class Password {
   String _password = '';
-  Password({password}) {
-    this._password = password;
+  Password({required String password}) {
+    _password = password;
   }
 
   bool isValid() {
     int upper = 0;
     int lower = 0;
     int digits = 0;
-    int l = this._password.length;
+    int l = _password.length;
 
     if (l < 8 || l > 16) { return false; }
-    for (String char in this._password.split('')) {
+    for (String char in _password.split('')) {
       if (isNum(char)) { digits += 1; }
       else if (isUpper(char)) { upper += 1; }
       else if (isLower(char)) { lower += 1; }
@@ -26,13 +26,13 @@ class Password {
 
   @override
   String toString() {
-    return "Password ${this._password}";
+    return "Password ${_password}";
   }
   String get password {
-    return this._password;
+    return _password;
   }
 
   void set password(String value) {
-    this._password = value;
+    _password = value;
   }
 }
