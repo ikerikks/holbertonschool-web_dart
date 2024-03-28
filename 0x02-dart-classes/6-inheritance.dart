@@ -29,7 +29,7 @@ class User extends Password{
   @override
   String toString() {
     super.password = user_password;
-    return 'User(id : ${this.id} ,name: ${this.name}, age: ${this.age}, height: ${this.height}), Password: ${super.isValid()}';
+    return 'User(id : ${this.id} ,name: ${this.name}, age: ${this.age}, height: ${this.height}, Password: ${super.isValid()})';
   }
 
 }
