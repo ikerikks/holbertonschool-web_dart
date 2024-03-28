@@ -32,7 +32,7 @@ class Password {
     return this._password;
   }
 
-  void set password(value) {
+  void set password(String value) {
     this._password = value;
   }
 }
