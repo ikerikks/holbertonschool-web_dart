@@ -3,11 +3,15 @@ class User {
   String name = '';
   int age = 0;
   double height = 0;
+  int id = 0;
+
+  static var color = 'rose';
 
   User({name, age, height, id}){
     this.name = name;
     this.age = age;
     this.height = height;
+    this.id = id;
   }
 
   static User fromJson(Map<dynamic, dynamic> userJson) {
@@ -20,5 +24,10 @@ class User {
   }
 
   toJson()=> {'name': name, 'age': age, 'height': height};
+  @override
+  String toString() {
+    return 'User(id : ${this.id}, name: ${this.id}, age: ${this.age}, height: ${this.height})';
+  }
+  
 }
 
