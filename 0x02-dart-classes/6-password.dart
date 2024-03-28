@@ -4,7 +4,7 @@ bool isLower(String char)=> char == char.toLowerCase()&& !isNum(char);
 
 class Password{
   String _password = '';
-  Password({password = ''}) {
+  Password({String password = ''}) {
     _password = password;
   }
   
