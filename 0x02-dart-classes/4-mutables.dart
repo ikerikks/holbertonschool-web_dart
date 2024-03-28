@@ -4,7 +4,7 @@ bool isLower(String char)=> char == char.toLowerCase()&& !isNum(char);
 
 class Password {
   String _password = '';
-  Password({required String password}) {
+  Password({password}) {
     _password = password;
   }
 
@@ -25,13 +25,8 @@ class Password {
   }
 
   @override
-  String toString() {
-    return "Password ${_password}";
-  }
-  String get password {
-    return _password;
-  }
-
+  String toString() => "Your Password is: ${_password}";
+  String get password => _password;
   void set password(String value) {
     _password = value;
   }
