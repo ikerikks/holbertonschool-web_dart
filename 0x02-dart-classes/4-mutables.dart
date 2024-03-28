@@ -8,14 +8,6 @@ class Password {
     this._password = password;
   }
 
-  String get password {
-    return this._password;
-  }
-
-  void set password(value) {
-    this._password = value;
-  }
-
   bool isValid() {
     int upper = 0;
     int lower = 0;
@@ -35,5 +27,12 @@ class Password {
   @override
   String toString() {
     return "Password ${this.password}";
+  }
+  String get password {
+    return this._password;
+  }
+
+  void set password(value) {
+    this._password = value;
   }
 }
