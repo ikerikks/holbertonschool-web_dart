@@ -5,7 +5,7 @@ bool isLower(String char)=> char == char.toLowerCase()&& !isNum(char);
 class Password {
   String _password = '';
   Password({password}) {
-    this._password = password; 
+    this._password = password;
   }
 
   String get password {
@@ -22,7 +22,7 @@ class Password {
     int digits = 0;
     int l = this.password.length;
 
-    if (l < 8 || l >16) { return false; }
+    if (l < 8 || l > 16) { return false; }
     for (String char in this.password.split('')) {
       if (isNum(char)) { digits += 1; }
       else if (isUpper(char)) { upper += 1; }
@@ -36,5 +36,4 @@ class Password {
   String toString() {
     return "Password ${this.password}";
   }
-
 }
