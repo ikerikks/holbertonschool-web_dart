@@ -23,10 +23,10 @@ class User {
   );
   }
 
-  toJson()=> {'name': name, 'age': age, 'height': height};
+  toJson()=> {'id': this.id, 'name': this.name, 'age': this.age, 'height': this.height};
   @override
   String toString() {
-    return 'User(id : ${this.id}, name: ${this.id}, age: ${this.age}, height: ${this.height})';
+    return 'User(id : ${this.id}, name: ${this.name}, age: ${this.age}, height: ${this.height})';
   }
   
 }
