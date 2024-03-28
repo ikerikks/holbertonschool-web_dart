@@ -5,8 +5,6 @@ class User {
   double height = 0;
   int id = 0;
 
-  static var color = 'rose';
-
   User({name, age, height, id}){
     this.name = name;
     this.age = age;
