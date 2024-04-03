@@ -18,7 +18,7 @@ Future<String> loginUser() async {
       return greetUser();
     }
     print('There is a user: false');
-    return greetUser();
+    return 'Wrong credentials';
   } catch (e) {
     return 'error caught: $e';
   }
