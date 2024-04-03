@@ -1,17 +1,17 @@
-// import 'package:http/http.dart' as http;
-// import 'dart:convert';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
-printRmCharacters() async {
+Future<dynamic> printRmCharacters() async {
   try {
-    // var url = Uri.parse('https://rickandmortyapi.com/api/character');
-    // var response = await http.get(url);
-    // var data = jsonDecode(response.body);
-    // var characters = data['results'];
+    var url = Uri.parse('https://rickandmortyapi.com/api/character');
+    var response = await http.get(url);
+    var data = jsonDecode(response.body);
+    var characters = data['results'];
 
-    // characters.forEach((character) {
-    //   print(character['name']);
-    // });
+    characters.forEach((character) {
+      print(character['name']);
+    });
   } catch(e) {
-    return 'error caughy: $e';
+    return 'error caught: $e';
   }
 }
