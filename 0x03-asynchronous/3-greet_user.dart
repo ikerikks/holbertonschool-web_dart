@@ -4,7 +4,6 @@ import '3-util.dart';
 Future<String> greetUser() async{
   try {
     var data = await fetchUserData();
-    // var credentials = await checkCredentials();
     return 'Hello ${jsonDecode(data)['username']}';
   } catch (e) {
     return 'error caught: $e';
@@ -14,7 +13,12 @@ Future<String> greetUser() async{
 Future<String> loginUser() async {
   try {
     bool logged = await checkCredentials();
-    return logged ? 'There is a user: true': 'There is a user: false';
+    if (logged) {
+      print('There is a user: true');
+      return greetUser();
+    }
+    print('There is a user: false');
+    return greetUser();
   } catch (e) {
     return 'error caught: $e';
   }
